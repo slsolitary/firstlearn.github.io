@@ -1,11 +1,22 @@
-查看分支：git branch
+一.创建Git仓库
 
-创建分支：git branch <name>
+git init//初始化仓库
+git add <file> //添加文件到暂存区
+git commit -m <message>//将暂存区的内容提交到当前分支
 
-切换分支：git checkout <name>
+注意：
+1. 报错：can't finish GitHub sharing process.Successfully created project 'Test' on GitHub, but initial commit failed:
+   原因：git未配置
+   解决方法：最好单独对项目进行配置，也可对全局配置，这里讲单独配置的方法。
+   1.cd <file>
+   2.ls -ah
+   3.cd .git 
+   4.sudo gedit config
+   5.添加下面内容：
+    [user]
+    name = XXX(自己的名称)
+    email = XXXX(邮箱)
 
-创建+切换分支：git checkout -b <name>
+二.常用命令
 
-合并某分支到当前分支：git merge <name>
-
-删除分支：git branch -d <name>
+ https://blog.csdn.net/halaoda/article/details/78661334
